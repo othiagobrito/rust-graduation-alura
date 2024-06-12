@@ -1,6 +1,10 @@
 const PI:f32 = 3.14;
 static GLOBAL_VARIABLE:u8 = 1;
 
+fn sum(a:i32, b:i32) -> i32 {
+    a + b
+}
+
 fn shadow() {
     let a:i32 = 77;
 
@@ -36,4 +40,6 @@ fn secondary() {
 fn main() {
     secondary();
     shadow();
+    let sum = sum(123, 321);
+    println!("Sum is {sum}");
 }
