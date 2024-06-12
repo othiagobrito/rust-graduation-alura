@@ -1,7 +1,18 @@
 const PI:f32 = 3.14;
 static GLOBAL_VARIABLE:u8 = 1;
 
-fn main() {
+fn shadow() {
+    let a:i32 = 77;
+
+    {
+        let a:i32 = 60;
+        println!("Inside A: {a}");
+    }
+
+    println!("Outside A: {a}");
+}
+
+fn secondary() {
     println!("PI = {PI}");
     println!("Global Variable = {GLOBAL_VARIABLE}");
 
@@ -20,4 +31,9 @@ fn main() {
     let letter:char = 'C';
     let letter_size = std::mem::size_of_val(&letter);
     println!("letter = {letter} - size = {letter_size}");
+}
+
+fn main() {
+    secondary();
+    shadow();
 }
