@@ -1,4 +1,10 @@
+const PI:f32 = 3.14;
+static GLOBAL_VARIABLE:u8 = 1;
+
 fn main() {
+    println!("PI = {PI}");
+    println!("Global Variable = {GLOBAL_VARIABLE}");
+
     let number:i32 = 300;
     let size = std::mem::size_of_val(&number);
     println!("number = {number} - size = {size}");
