@@ -92,6 +92,20 @@ fn string_stealer(string: &mut String) {
     println!("{string}");
 }
 
+fn pattern_matching() {
+    for n in 1..21 {
+        let text = match n {
+            1 => "A few",
+            2 | 3 => "A bit",
+            4..=10 => "A lot",
+            _ if n % 2 == 0 => "A good amount",
+            _ => "Too much",
+        };
+
+        println!("{n}: {text}");
+    }
+}
+
 fn main() {
     secondary();
     shadow();
@@ -112,4 +126,5 @@ fn main() {
     println!("{language} purpose is {purpose}");
 
     ownership();
+    pattern_matching();
 }
