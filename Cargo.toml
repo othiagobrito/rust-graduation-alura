@@ -1,0 +1,4 @@
+[package]
+name = "rust-graduation-alura"
+version = "0.0.1"
+authors = ["Thiago Brito <thiago7brito@gmaill.com>"]
