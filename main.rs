@@ -37,9 +37,29 @@ fn secondary() {
     println!("letter = {letter} - size = {letter_size}");
 }
 
+fn conditionals() {
+    let age: u8 = 26;
+    let with_adult: bool = true;
+    let is_adult: bool = age >= 18;
+    let minimum_age: bool = age >= 16;
+
+    if is_adult {
+        println!("Allowed");
+    } else if minimum_age && with_adult {
+        println!("Allow with adult");
+    } else {
+        println!("Not Allowed");
+    }
+
+    let condition = if is_adult { "adult" } else { "minor" };
+    println!("Status: {condition}");
+}
+
 fn main() {
     secondary();
     shadow();
     let sum = sum(123, 321);
     println!("Sum is {sum}");
+
+    conditionals();
 }
