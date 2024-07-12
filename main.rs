@@ -72,7 +72,12 @@ fn loops() {
         println!("{multiplier} x {counter} = {result}");
         counter += 1;
 
-        if counter >= 10 { break };
+        if counter > 10 { break };
+    }
+
+    for n in 1..11 {
+        let result = n * multiplier;
+        println!("{multiplier} x {n} = {result}");
     }
 }
 
