@@ -82,11 +82,13 @@ fn loops() {
 }
 
 fn ownership() {
-    let sample = String::from("Thiago");
-    string_stealer(sample);
+    let mut sample = String::from("Thiago");
+    string_stealer(&mut sample);
+    println!("{sample}");
 }
 
-fn string_stealer(string: String) {
+fn string_stealer(string: &mut String) {
+    string.push_str(" Brito");
     println!("{string}");
 }
 
