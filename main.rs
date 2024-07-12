@@ -106,6 +106,17 @@ fn pattern_matching() {
     }
 }
 
+fn errors() {
+    match response() {
+        Ok(success) => println!("Response: {success}"),
+        Err(error) => println!("Response: {error}"),
+    };
+}
+
+fn response() -> Result<String, u8> {
+    Ok(String::from("Everything went well"))
+}
+
 fn main() {
     secondary();
     shadow();
@@ -127,4 +138,5 @@ fn main() {
 
     ownership();
     pattern_matching();
+    errors();
 }
