@@ -89,4 +89,14 @@ fn main() {
 
     conditionals();
     loops();
+
+    let language = "PHP";
+    let purpose = match language {
+        "PHP" => "Web",
+        "Kotlin" => "Android",
+        "Python" => "Data Science",
+        _ => "Unknown",
+    };
+
+    println!("{language} purpose is {purpose}");
 }
