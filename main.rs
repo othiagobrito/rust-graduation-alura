@@ -81,6 +81,15 @@ fn loops() {
     }
 }
 
+fn ownership() {
+    let sample = String::from("Thiago");
+    string_stealer(sample);
+}
+
+fn string_stealer(string: String) {
+    println!("{string}");
+}
+
 fn main() {
     secondary();
     shadow();
@@ -99,4 +108,6 @@ fn main() {
     };
 
     println!("{language} purpose is {purpose}");
+
+    ownership();
 }
