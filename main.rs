@@ -38,10 +38,10 @@ fn secondary() {
 }
 
 fn conditionals() {
-    let age: u8 = 26;
-    let with_adult: bool = true;
-    let is_adult: bool = age >= 18;
-    let minimum_age: bool = age >= 16;
+    let age:u8 = 26;
+    let with_adult:bool = true;
+    let is_adult:bool = age >= 18;
+    let minimum_age:bool = age >= 16;
 
     if is_adult {
         println!("Allowed");
@@ -55,6 +55,27 @@ fn conditionals() {
     println!("Status: {condition}");
 }
 
+fn loops() {
+    let multiplier:u8 = 5;
+
+    let mut counter:u8 = 1;
+
+    while counter <= 10 {
+        let result = counter * multiplier;
+        println!("{multiplier} x {counter} = {result}");
+        counter += 1;
+    }
+
+    counter = 1;
+    loop {
+        let result = counter * multiplier;
+        println!("{multiplier} x {counter} = {result}");
+        counter += 1;
+
+        if counter >= 10 { break };
+    }
+}
+
 fn main() {
     secondary();
     shadow();
@@ -62,4 +83,5 @@ fn main() {
     println!("Sum is {sum}");
 
     conditionals();
+    loops();
 }
